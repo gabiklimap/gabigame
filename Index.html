@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriella Lima | Portfolio Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Sound toggle -->
+<button id="sound-toggle" class="sound-btn" title="Toggle music">🔇</button>
+
+<!-- HUD (shown during gameplay) -->
+<div id="hud" class="hud hidden">
+  <div class="hud-inner">
+    <div class="hud-score">
+      <span class="hud-label">SCORE</span>
+      <span id="hud-score-val">0</span>
+    </div>
+    <div class="hud-phase-name">
+      <span id="hud-phase-label">FASE 1</span>
+    </div>
+    <div class="hud-skills-row">
+      <div id="hud-skills"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Notification toast -->
+<div id="toast" class="toast hidden"></div>
+
+<!-- Main game container -->
+<div id="game">
+  <div id="screen-title"   class="screen active"></div>
+  <div id="screen-phase1"  class="screen"></div>
+  <div id="screen-phase2"  class="screen"></div>
+  <div id="screen-phase3"  class="screen"></div>
+  <div id="screen-phase4"  class="screen"></div>
+  <div id="screen-phase5"  class="screen"></div>
+</div>
+
+<!-- Floating particles layer -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Furto overlay -->
+<div id="furto-overlay" class="furto-overlay hidden">
+  <div class="furto-content">
+    <div class="furto-icon">💔</div>
+    <h2 class="furto-title">O FURTO</h2>
+    <p class="furto-text">"Cheguei pra trabalhar um dia e descobri que tinham levado tudo. Meu estúdio. Meu estoque de cosméticos. Minha marca. Tudo."</p>
+    <div class="furto-actions">
+      <button class="btn-furto" data-action="empathy">Entendo o peso disso</button>
+      <button class="btn-furto secondary" data-action="continue">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Media modal -->
+<div id="media-modal" class="modal hidden">
+  <button class="modal-close">✕</button>
+  <div id="modal-content"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
